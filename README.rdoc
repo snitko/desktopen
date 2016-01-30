@@ -1,19 +1,29 @@
-= desktopen
+# desktopen
+A simple CLI util to open and position X windows.
 
-Description goes here.
+Everytime a start a computer I had to manually open all my windows: terminal, text editor, browser -
+then put them in proper viewports/displayes and position them. This is tedious work to be avoided.
+Now I just use the following script made possible by `desktopen`:
 
-== Contributing to desktopen
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+A rather simple script that opens and places various X windows on different viewports and desktops for you.
 
-== Copyright
+    # Chats and email
+    desktopen "google-chrome --new-window https://gmail.com" -v 1 --fullscreen
+    desktopen "google-chrome --new-window https://web.telegram.org" -v 1 -d 2 -x 447 -y 50 -w 1569 -h 1256
 
-Copyright (c) 2016 Roman Snitko. See LICENSE.txt for
-further details.
+    # Corporate chats and issue tracking
+    desktopen "google-chrome --new-window https://workflowy.com" -v 2 -d 1 -x 3 -y 10 -w 1238 -h 1336
+    desktopen "google-chrome --new-window https://mycompany.slack.com/messages/general/" -v 2 -d 1 -x 1269 -y 10 -w 1247 -h 1348
+    desktopen "google-chrome --new-window https://mycompany.atlassian.net/issues/" -v 2 -d 2 -x 3 -y 10 -w 1238 -h 1336
 
+    # Coding
+    desktopen 'terminator -m -l "project 1"'  -v 6 -d 2 --fullscreen
+    desktopen 'gvim -c "cd ~/Work/project-1"' -v 6 -d 1 --fullscreen
+    desktopen 'terminator -m -l "project 2"'  -v 6 -d 2 --fullscreen
+    desktopen 'gvim -c "cd ~/Work/project-2"' -v 6 -d 1 --fullscreen
+
+To get a detailed breadkdown of all CLI options, just type `desktopen --help` once you installed it.
+
+## Installation
+
+`gem install dekstopen`
