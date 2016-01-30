@@ -16,15 +16,13 @@ Gem::Specification.new do |s|
   s.email = "roman.snitko@gmail.com"
   s.executables = ["desktopen"]
   s.extra_rdoc_files = [
-    "LICENSE.txt",
-    "README.rdoc"
+    "LICENSE.txt"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
     "Rakefile",
     "VERSION",
     "bin/desktopen",
