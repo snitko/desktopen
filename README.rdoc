@@ -25,5 +25,8 @@ A rather simple script that opens and places various X windows on different view
 To get a detailed breadkdown of all CLI options, just type `desktopen --help` once you installed it.
 
 ## Installation
-
 `gem install dekstopen`
+
+## Known issues
+* It currently only supports up to 2 displays. Ideally, I'd want it to work with more than 2 monitors, but because I have 2,
+I didn't bother to properly adjust the script.
