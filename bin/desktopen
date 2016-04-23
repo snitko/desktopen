@@ -51,7 +51,7 @@ pid = spawn("#{ARGV[0]}")
 # Give the process some time to load, otherwise we can start moving the window before
 # it's properly opened and this may result in mispositioning.
 # The sleep time obviously depends on the system, for slower PCs it should be set to a larger number.
-sleep options[:repos_timeout] || 1
+sleep options[:repos_timeout].to_i || 1
 
 position_and_resize_active_window(
   window_id: find_opened_window(old_window_ids_list),
